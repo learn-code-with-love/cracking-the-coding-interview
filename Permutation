@@ -1,0 +1,43 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Permu {
+	
+	static String sort(String s) {
+		char[] content=s.toCharArray();
+		java.util.Arrays.sort(content);
+		return new String(content);
+	}
+	
+	
+	static boolean permutation(String s, String t) {
+		if(s.length()!=t.length()) {
+			return false;
+		}
+		return sort(s).equals(sort(t));
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        Scanner sc=new Scanner(System.in);
+		
+		System.out.println("enter your words");
+		String drw=sc.next();
+		String wrd=sc.next();
+		
+		System.out.println(permutation(drw,wrd));
+		
+		
+		
+		
+		sc.close();
+
+	}
+
+}
+
+
+
+
